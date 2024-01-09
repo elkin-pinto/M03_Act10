@@ -16,6 +16,9 @@ repositories {
 }
 
 dependencies {
+    testImplementation(kotlin("test"))
+    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
+
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.9.10")
 }
