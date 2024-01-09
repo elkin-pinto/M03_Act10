@@ -1,7 +1,15 @@
 package org.example
 import java.util.*
 
-
+/**
+ * @author David Pinto
+ * @version 1.9.10
+ *
+ * El main es la funcion principal del programa, donde se llama al resto de funciones
+ *
+ * @see leerNumeroNatural se asegura que el numero introducido sea un numero natural
+ * @see algoritmeEuclides recive dos numero s naturales y retorna el maximo comun divisor
+ */
 fun main() {
     val scan = Scanner(System.`in`)
     println("Di un numero natural positivo")
@@ -23,8 +31,8 @@ fun main() {
  * @return retorna en última instancia un Int que es el maximo comun divisor.
  */
 fun algoritmeEuclides(n1:Int,n2:Int):Int {
-    var result:Int
     var numero1 = n1
+    var result:Int = n1
     var numero2 = n2
     if (numero2 < numero1) {
         numero1 -= numero2
@@ -34,9 +42,9 @@ fun algoritmeEuclides(n1:Int,n2:Int):Int {
         numero2 -= numero1
         result = algoritmeEuclides(numero1,numero2)
     }
+
     return result
 }
-
 
 /**
  * Se asegura que el input del usuario sea un numero natural
