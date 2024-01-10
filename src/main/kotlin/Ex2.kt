@@ -1,4 +1,3 @@
-package org.example
 import java.util.*
 
 /**
@@ -13,11 +12,11 @@ import java.util.*
 fun main() {
     val scan = Scanner(System.`in`)
     println("Di un numero natural positivo")
-    val n1 = leerNumeroNatural(scan,"Ese no es un numero natural, preuba otra vez: ")
+    val n1 = leerNumeroNatural(scan, "Ese no es un numero natural, preuba otra vez: ")
     println("Di un numero natural positivo")
-    val n2 = leerNumeroNatural(scan,"Ese no es un numero natural, preuba otra vez: ")
+    val n2 = leerNumeroNatural(scan, "Ese no es un numero natural, preuba otra vez: ")
 
-    val maximoComunDivisor = algoritmeEuclides(n1,n2)
+    val maximoComunDivisor = algoritmeEuclides(n1, n2)
 
     println(maximoComunDivisor)
 }
@@ -36,11 +35,11 @@ fun algoritmeEuclides(n1:Int,n2:Int):Int {
     var numero2 = n2
     if (numero2 < numero1) {
         numero1 -= numero2
-        result = algoritmeEuclides(numero1,numero2)
+        result = algoritmeEuclides(numero1, numero2)
     }
     else if (numero1 < numero2) {
         numero2 -= numero1
-        result = algoritmeEuclides(numero1,numero2)
+        result = algoritmeEuclides(numero1, numero2)
     }
 
     return result
